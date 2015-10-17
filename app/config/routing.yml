@@ -1,0 +1,4 @@
+project:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing.yml"

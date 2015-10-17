@@ -1,0 +1,9 @@
+services:
+    account.repository:
+        class: "AppBundle\Repository\DTAccountRepository"
+        factory: [@doctrine.orm.entity_manager, getRepository]
+        arguments: [AppBundle\Domain\Account\Account]
+    app.listener.auth_id_listener:
+        class: "AppBundle\EventListener\AuthIdListener"
+        tags:
+            - {name: kernel.event_listener, event: kernel.request, method: onKernelRequest}

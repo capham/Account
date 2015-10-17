@@ -1,0 +1,5 @@
+account:
+    type: rest
+    prefix: account
+    resource: AppBundle\Controller\AccountController
+    name_prefix: account_
